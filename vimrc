@@ -160,28 +160,17 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 
 autocmd Filetype ruby,coffee,sass,scss,jade,erb setlocal ts=2 sw=2
-autocmd Filetype md,markdown setlocal ts=2 sw=2
-autocmd Filetype mk,markdown setlocal noexpandtab
+autocmd Filetype md,markdown setlocal ts=4 sw=4
+autocmd Filetype mk,markdown setlocal expandtab
 autocmd Filetype coffee SnipMateLoadScope eruby
 " emmet
 let g:user_emmet_install_global = 1
 "autocmd FileType html,erb,css,less,sass,scss EmmetInstall
 "autocmd FileType html,erb,css,less,sass,scss imap <buffer> <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-imap   <C-y>;   <plug>(emmet-expand-abbr)
-imap   <C-y>;   <plug>(emmet-expand-word)
-imap   <C-y>u   <plug>(emmet-update-tag)
-imap   <C-y>d   <plug>(emmet-balance-tag-inward)
-imap   <C-y>D   <plug>(emmet-balance-tag-outward)
-imap   <C-y>n   <plug>(emmet-move-next)
-imap   <C-y>N   <plug>(emmet-move-prev)
-imap   <C-y>i   <plug>(emmet-image-size)
-imap   <C-y>/   <plug>(emmet-toggle-comment)
-imap   <C-y>j   <plug>(emmet-split-join-tag)
-imap   <C-y>k   <plug>(emmet-remove-tag)
-imap   <C-y>a   <plug>(emmet-anchorize-url)
-imap   <C-y>A   <plug>(emmet-anchorize-summary)
-imap   <C-y>m   <plug>(emmet-merge-lines)
-imap   <C-y>c   <plug>(emmet-code-pretty)
+let g:user_emmet_leader_key='<C-A-S-Z>'
+imap   <C-y>   <plug>(emmet-expand-abbr)
+nmap   <C-y>   <plug>(emmet-expand-abbr)
+vmap   <C-y>   <plug>(emmet-expand-abbr)
 
 
 

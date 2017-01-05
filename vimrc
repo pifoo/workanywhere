@@ -162,6 +162,8 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 autocmd Filetype ruby,coffee,sass,scss,jade,erb setlocal ts=2 sw=2
 autocmd Filetype md,markdown setlocal ts=4 sw=4
 autocmd Filetype mk,markdown setlocal expandtab
+au BufNewFile,BufRead *.vue setlocal filetype=vue
+autocmd Filetype vue setlocal filetype=html
 autocmd Filetype coffee SnipMateLoadScope eruby
 " emmet
 let g:user_emmet_install_global = 1

@@ -1,5 +1,5 @@
 command_exists () {
-    type "$1" &> /dev/null ;
+  type "$1" &> /dev/null ;
 }
 
 xcode-select --install
@@ -20,18 +20,18 @@ brew install neovim/neovim/neovim
 
 # yd
 if ! [ -d ~/repos/ydcv ]; then 
-    mkdir -p ~/repos/ydcv && git clone --depth=1 --branch=master https://github.com/felixonmars/ydcv.git ~/repos/ydcv
+  mkdir -p ~/repos/ydcv && git clone --depth=1 --branch=master https://github.com/felixonmars/ydcv.git ~/repos/ydcv
 fi
 
 #
 if ! [ -f ~/repos/avoscloud_completion.sh ]; then
-    curl -L https://raw.githubusercontent.com/leancloud/avoscloud-code-command/master/avoscloud_completion.sh > ~/repos/avoscloud_completion.sh
+  curl -L https://raw.githubusercontent.com/leancloud/avoscloud-code-command/master/avoscloud_completion.sh > ~/repos/avoscloud_completion.sh
 fi
 
 
 # vim
 if ! [ -f ~/.vim/autoload/plug.vim ]; then
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;
 fi 
 
 [ -f ~/.vimrc ] &&  mv ~/.vimrc ~/.vimrc.old 
@@ -40,21 +40,21 @@ vim -c ":PlugInstall"
 
 #### z
 if ! [ -d ~/repos/z ]; then 
-mkdir -p ~/repos/z && git clone --depth=1 --branch=master https://github.com/rupa/z.git ~/repos/z
+  mkdir -p ~/repos/z && git clone --depth=1 --branch=master https://github.com/rupa/z.git ~/repos/z
 fi
 
 #### fzf
 if ! (command_exists fzf); then 
-    brew install ag
-    brew install fzf
-    /usr/local/opt/fzf/install --no-key-bindings --no-completion
+  brew install ag
+  brew install fzf
+  /usr/local/opt/fzf/install --no-key-bindings --no-completion
 fi
 ####  zsh
 [ "$SHELL" != "/bin/zsh" ] && chsh -s /bin/zsh && zsh;
 
 if ! [ -d ~/.zprezto ]; then
-	proxychains4 -f ./proxychains.conf git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" 
-	echo "Please cd ~/.zprezto and RUN pc git pull && pc git submodule update --init --recursive"	
+  proxychains4 -f ./proxychains.conf git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" 
+  echo "Please cd ~/.zprezto and RUN pc git pull && pc git submodule update --init --recursive"	
 fi
 [ -f ~/.zlogin ] || zsh ./zpreztorc_init
 [ -f ~/.zshrc ]  && mv ~/.zshrc ~/.zshrc.old

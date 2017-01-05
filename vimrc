@@ -107,9 +107,7 @@ set guioptions-=r
 let mapleader = "\<space>"
 let g:mapleader = "\<space>"
 let g:EasyGrepWindowPosition = "botright"
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-"
+
 set noshowmode
 set autoread
 set iskeyword=@,$,48-57,192-255,_
@@ -120,6 +118,7 @@ let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
 nnoremap <leader>f :<C-u>NERDTreeFind<CR>
 "nnoremap <leader>e :<C-u>NERDTree .<CR>\|:wincmd p<CR>
+
 " NERDTree tabs
 let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_open_on_new_tab = 0
@@ -128,19 +127,11 @@ let g:nerdtree_tabs_autofind = 0
 nnoremap <leader>k :Bclose<CR>
 
 
+" auto save
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_in_insert_mode = 0
 
 " ctrlp
-"let g:ctrlp_cmd = 'call CallCtrlP()'
-"func! CallCtrlP()
-    "if exists('s:called_ctrlp')
-        "CtrlPLastMode
-    "else
-        "let s:called_ctrlp = 1
-        "CtrlPMRU
-    "endif
-"endfunc
 let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/]((\.(git|hg|svn))|(bower_components|node_modules|target))$',
       \ 'file': '\v\.(exe|so|dll)$',
@@ -152,12 +143,9 @@ inoremap <c-b> <ESC>:CtrlPBuffer<CR>
 nnoremap <c-e> :CtrlPMRUFiles<CR>
 inoremap <c-e> <ESC>:CtrlPMRUFiles<CR>
 noremap <c-g> <ESC>:Ag<CR>
-let g:ctrlp_use_caching = 1
+let g:ctrlp_use_caching = 0
 set grepprg=ag\ --nogroup\ --nocolor
-
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-"let g:ctrlp_user_command = 'rg %s --files'
-
 
 
 autocmd Filetype ruby,coffee,sass,scss,jade,erb setlocal ts=2 sw=2
@@ -174,8 +162,6 @@ let g:user_emmet_leader_key='<C-A-S-Z>'
 imap   <C-y>   <plug>(emmet-expand-abbr)
 nmap   <C-y>   <plug>(emmet-expand-abbr)
 vmap   <C-y>   <plug>(emmet-expand-abbr)
-
-
 
 " markdown
 let g:vim_markdown_folding_disabled=1

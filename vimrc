@@ -294,7 +294,7 @@ if has("gui_running")
 endif
 
 " colorscheme
-colorscheme molokai 
+colorscheme molokai
 set colorcolumn=0
 map <F11> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
@@ -323,19 +323,6 @@ function! <SID>BufcloseCloseIt()
   if buflisted(l:currentBufNum)
     execute("bdelete! ".l:currentBufNum)
   endif
-endfunction
-
-" Set a nicer foldtext function
-
-function! MyFilename()
-  let t = ('' != expand('%:t'))
-  if(t)
-    let p = expand('%:p')
-    let r =p
-  else
-    let r = '[No Name]'
-  endif
-  return r
 endfunction
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -368,41 +355,12 @@ endfunction
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-
-" ctrl-space
-if executable("ag")
-  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-endif
-
-
-" GoldView
-let g:goldenview__enable_default_mapping = 0
-
-nmap <silent> <C-N>  <Plug>GoldenViewSplit
-nmap <silent> <F11>  <Plug>GoldenViewSwitchToggle
-
-nmap <silent> <C-.>  <Plug>GoldenViewNext
-nmap <silent> <C-,>  <Plug>GoldenViewPrevious
-
-" HTML
-
-" spaces
-fun! <SID>StripTrailingWhitespaces()
-  let l = line(".")
-  let c = col(".")
-  %s/\s\+$//e
-  call cursor(l, c)
-endfun
-
-"autocmd FileType erb,html,javascript,css,scss,coffee autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+" StripTrailingWhitespaces
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 "set spell spelllang=en_us
 
 "rails
-
-
 nnoremap <leader>rt :<c-u>!rails t<CR>
 nnoremap <leader>rr :<c-u>!bin/rake routes<CR>
 nnoremap <leader>rv :<c-u>Eview<CR>
 nnoremap <leader>rc :<c-u>Econtroller<CR>
-"hi MatchParen term=none cterm=none ctermfg=none ctermbg=none gui=none guifg=none guibg=none

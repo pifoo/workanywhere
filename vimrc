@@ -22,9 +22,6 @@ Plug 'vimoutliner/vimoutliner'
 Plug 'leafgarland/typescript-vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'FrankFang/vim-colorschemes'
-Plug 'zhaocai/GoldenView.Vim'
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
@@ -36,7 +33,6 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'xolox/vim-misc'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'groenewege/vim-less'
-Plug 'keith/swift.vim'
 Plug 'mikewest/vimroom'
 Plug 'sjl/gundo.vim'
 Plug 'altercation/vim-colors-solarized'
@@ -44,7 +40,6 @@ Plug 'ervandew/supertab'
 Plug 'groenewege/vim-less'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'pangloss/vim-javascript'
-Plug 'frankfang/mydiary.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
@@ -82,6 +77,11 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
+" python 
+let g:python_host_prog='/usr/local/Cellar/python/2.7.12/bin/python2'
+let g:python2_host_prog='/usr/local/Cellar/python/2.7.12/bin/python2'
+let g:python3_host_prog='/usr/local/Cellar/python3/3.5.2_1/bin/python3'
+
 " js hint 2
 let jshint2_save = 1
 let jshint2_max_height = 12
@@ -90,15 +90,10 @@ let jshint2_max_height = 12
 " git gutter
 let g:gitgutter_diff_args = '--ignore-all-space --ignore-blank-lines'
 
-let g:python_host_prog = '/usr/local/bin/python2.7'
 let g:session_autosave = 'no'
-let g:python2_host_prog = '/usr/local/bin/python2.7'
-let g:python3_host_prog = '/usr/local/bin/python3.5'
 
 let g:gundo_preview_height = 30
 let g:gundo_right = 1
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
 let g:syntastic_json_checkers = ['jsonlint']
 let g:vim_json_syntax_conceal = 0
 
@@ -364,3 +359,4 @@ nnoremap <leader>rt :<c-u>!rails t<CR>
 nnoremap <leader>rr :<c-u>!bin/rake routes<CR>
 nnoremap <leader>rv :<c-u>Eview<CR>
 nnoremap <leader>rc :<c-u>Econtroller<CR>
+

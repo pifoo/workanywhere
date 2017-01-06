@@ -77,10 +77,6 @@ call plug#end()
 filetype plugin indent on
 syntax enable
 
-" python 
-let g:python_host_prog='/usr/local/Cellar/python/2.7.12/bin/python2'
-let g:python2_host_prog='/usr/local/Cellar/python/2.7.12/bin/python2'
-let g:python3_host_prog='/usr/local/Cellar/python3/3.5.2_1/bin/python3'
 
 " js hint 2
 let jshint2_save = 1

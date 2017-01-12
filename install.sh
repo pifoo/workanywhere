@@ -9,6 +9,7 @@ brew install vim
 command_exists zsh || brew install zsh
 command_exists python3 || brew install python3
 pip3 install neovim
+pip2 install neovim
 command_exists trash || brew install trash
 command_exists node || brew install node
 command_exists rg || brew install https://raw.githubusercontent.com/BurntSushi/ripgrep/master/pkg/brew/ripgrep.rb

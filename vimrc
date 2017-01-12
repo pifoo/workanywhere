@@ -6,7 +6,6 @@ set hidden
 set autochdir
 set shortmess=a
 set autowriteall
-set termguicolors
 
 inoremap <C-L> <Esc>:<c-u>wa<CR>
 nnoremap <C-L> <Esc>:<c-u>wa<CR>
@@ -145,6 +144,7 @@ autocmd Filetype mk,markdown setlocal expandtab
 au BufNewFile,BufRead *.vue setlocal filetype=vue
 autocmd Filetype vue setlocal filetype=html
 autocmd Filetype coffee SnipMateLoadScope eruby
+
 " emmet
 let g:user_emmet_install_global = 1
 "autocmd FileType html,erb,css,less,sass,scss EmmetInstall

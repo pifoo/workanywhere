@@ -7,7 +7,12 @@
 #sudo apt-get install git -y
 #sudo apt-get install vim -y
 #sudo apt-get autoremove -y
-sudo apt-get install nginx -y
+#sudo apt-get install nginx -y
+
+
+if ! [ -d ~/.repos/z ]; then
+  mkdir -p ~/.repos/z && git clone --depth=1 --branch=master git@github.com:rupa/z.git ~/.repos/z
+fi
 
 
 ## vim
@@ -17,7 +22,6 @@ sudo apt-get install nginx -y
 #[ -f ~/.vimrc ] &&  mv ~/.vimrc ~/.vimrc.old 
 #ln -s "$(pwd -P)/vimrc" ~/.vimrc && echo "~/.vimrc copied"
 #vim -c ":PlugInstall"
-
 
 
 

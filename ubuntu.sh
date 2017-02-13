@@ -9,6 +9,9 @@
 #sudo apt-get autoremove -y
 #sudo apt-get install nginx -y
 
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 
 if ! [ -d ~/.repos/z ]; then
   mkdir -p ~/.repos/z && git clone --depth=1 --branch=master git@github.com:rupa/z.git ~/.repos/z

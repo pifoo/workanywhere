@@ -12,6 +12,7 @@ nnoremap <C-L> <Esc>:<c-u>wa<CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'Shutnik/jshint2.vim'
+Plug 'posva/vim-vue'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'vim-ruby/vim-ruby'

@@ -246,7 +246,6 @@ set laststatus=2
 set lbr
 set mat=2
 set mouse=
-if has('mouse') | set mouse=a | endif
 set mousemodel=extend
 set nobackup
 set switchbuf=usetab
